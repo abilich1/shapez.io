@@ -51,7 +51,7 @@ global:
         shift: SHIFT
         space: SZÓKÖZ
     loggingIn: Bejelentkezés
-    loadingResources: Downloading additional resources (<percentage> %)
+    loadingResources: További források letöltése... (<percentage> %)
     discount: -<percentage>%
     discountSummerSale: SPECIAL PROMOTION! Offer ends 7 July
 demoBanners:
@@ -93,16 +93,15 @@ mainMenu:
     puzzleDlcText: Szereted optimalizálni a gyáraid méretét és hatákonyságát?
         Szerezd meg a Puzzle DLC-t a Steamen most!
     puzzleDlcWishlist: Kívánságlistára vele!
-    puzzleDlcViewNow: View Dlc
+    puzzleDlcViewNow: DLC megtekintése
     mods:
-        title: Active Mods
-        warningPuzzleDLC: Playing the Puzzle DLC is not possible with mods. Please
-            disable all mods to play the DLC.
-    playingFullVersion: You are now playing the full version!
+        title: Aktív modok
+        warningPuzzleDLC: A Puzzle DLC csak modok nélkül játszható. Kérlek kapcsold ki a modokat hogy játszani tudj.
+    playingFullVersion: Most a teljes verzióval játszol!
     logout: Logout
-    noActiveSavegames: No active savegames found - Click play to start a new game!
-    playFullVersionV2: Bough shapez on Steam? Play the full version in your Browser!
-    playFullVersionStandalone: You can now also play the full version in your Browser!
+    noActiveSavegames: Nem található aktív mentés - Kattints a Játék gombra hogy új játékot kezdj!
+    playFullVersionV2: A Steamen vásároltad meg a shapez-t? Játszd a teljes verziót a böngésződben!
+    playFullVersionStandalone: Mostmár játszható a teljes verzió a böngésződben!
 dialogs:
     buttons:
         ok: OK
@@ -123,7 +122,7 @@ dialogs:
         title: Importálás Hiba
         text: "Nem sikerült importálni a mentésedet:"
     importSavegameSuccess:
-        title: Mentés Importálva
+        title: Mentés importálva
         text: A mentésed sikeresen importálva lett.
     gameLoadFailure:
         title: A játék elromlott
@@ -194,8 +193,7 @@ dialogs:
     createMarker:
         title: Új Jelölő
         titleEdit: Jelölő Szerkesztése
-        desc: Give it a meaningful name, you can also include a <strong>short
-            key</strong> of a shape (Which you can generate <link>here</link>)
+        desc: Adj neki értelmes nevet, ez tartalmazhatja a <strong>gyors kódját</strong> egy alakzatnak (Amit <link>ITT</link> tudsz legenerálni!)
     editSignal:
         title: Jel Beállítása
         descItems: "Válassz egy előre definiált elemet:"
@@ -282,22 +280,19 @@ dialogs:
         title: Gyorskód Beillesztése
         desc: Illeszd be a gyorskódot, hogy betöltsd a Fejtörőt.
     puzzleDelete:
-        title: Delete Puzzle?
-        desc: Are you sure you want to delete '<title>'? This can not be undone!
+        title: Törlöd a fejtörőt?
+        desc: Biztosan törölni szeretnéd a '<title>'? Ezt nem lehet visszacsinálni!
     modsDifference:
-        title: Mod Warning
-        desc: The currently installed mods differ from the mods the savegame was created
-            with. This might cause the savegame to break or not load at all. Are
-            you sure you want to continue?
-        missingMods: Missing Mods
-        newMods: Newly installed Mods
+        title: Mod figyelmeztetés
+        desc: A most telepített modok listája eltér attól amivel az aktuális mentett játékot készítették. Ettől lehet hogy nem tölt be, vagy akár tönkremehet a mentett játék. Biztosan folytatod?
+        missingMods: Hiányzó modok
+        newMods: Újonnan telepített modok
     resourceLoadFailed:
-        title: Resources failed to load
-        demoLinkText: shapez demo on Steam
-        descWeb: "One ore more resources could not be loaded. Make sure you have a
-            stable internet connection and try again. If this still doesn't
-            work, make sure to also disable any browser extensions (including
-            adblockers).<br><br> As an alternative, you can also play the
+        title: Az erőforrások nem tudtak betöltődni.
+        demoLinkText: Shapez demo a Steamen
+        descWeb: "Egy vagy több erőforrás nem tudott betölteni. Erősítsd meg hogy stabil az internetkapcsolatod, majd próbáld újra. 
+            Ha ez sem működik, kapcsold ki a böngésző bővítményeit (reklámblokkolókat beleértve).<br><br>
+            Alternatívaként játszhatsz ezzel: 
             <demoOnSteamLinkText>. <br><br> Error Message:"
         descSteamDemo: "One ore more resources could not be loaded. Try restarting the
             game - If that does not help, try reinstalling and verifying the
@@ -484,11 +479,11 @@ ingame:
                 title: Steam Achievementek
                 desc: Szerezd meg mindet!
             mods:
-                title: Modding support!
-                desc: Over 80 mods available!
-        titleV2: "Get the full version now on Steam to unlock:"
-        titleExpiredV2: Demo completed!
-        titleEnjoyingDemo: Enjoy the demo?
+                title: Mod támogatás!
+                desc: Több mint 80 mod elérhető!
+        titleV2: "Szerezd meg a teljes verziót a Steamen hogy feloldd:"
+        titleExpiredV2: Demo teljesítve!
+        titleEnjoyingDemo: Tetszik a demo?
     puzzleEditorSettings:
         zoneTitle: Zóna
         zoneWidth: Szélesség
@@ -497,8 +492,8 @@ ingame:
         clearItems: Elemek eltávolítása
         share: Megosztás
         report: Jelentés
-        clearBuildings: Clear Buildings
-        resetPuzzle: Reset Puzzle
+        clearBuildings: Építmények törlése
+        resetPuzzle: Fejtörő újrakezdése
     puzzleEditorControls:
         title: Fejtörő Készítő
         instructions:
@@ -1088,12 +1083,12 @@ settings:
             description: Kizoomolt állapotban a térképen megjelenő erőforrások (alakzatok és
                 színek) méretét állítja.
         shapeTooltipAlwaysOn:
-            title: Shape Tooltip - Show Always
-            description: Whether to always show the shape tooltip when hovering buildings,
-                instead of having to hold 'ALT'.
+            title: Forma tooltip - Mindig mutassa
+            description: Mindig mutassa a forma tooltipet,
+                ahelyett hogy az 'ALT' gombot kellene nyomva tartanod.
     rangeSliderPercentage: <amount> %
     tickrateHz: <amount> Hz
-    newBadge: New!
+    newBadge: Új!
 keybindings:
     title: Gyorsbillentyűk
     hint: "Tipp: Használd ki a CTRL, SHIFT és ALT billentyűket, amelyek különféle
@@ -1207,12 +1202,10 @@ tips:
     - Igyekezz kompakt gyárakat építeni - megéri!
     - Ne építs közvetlenül a Központ közelébe, mert óriási káoszt okozhat!
     - A szalagtervező irányát az <b>R</b> billentyűvel állíthatod.
-    - Holding <b>CTRL</b> allows dragging of belts without auto-orientation.
+    - A <b>CTRL</b> nyomvatartásával elmozdíthatod a síneket automatikus irányzék nélkül.
     - A soros végrehajtás hatékonyabb, mint a párhuzamos.
-    - Serial execution is more efficient than parallel.
     - A szimmetria kulcsfontosságú!
-    - You can use <b>T</b> to switch between different variants.
-    - A szimmetria kulcsfontosságú!
+    - Használhatod a <b>T</b> betűt a különböző variánsok közti változtatáshoz.
     - Az épületek megfelelő arányban való építésével maximalizálható a
       hatékonyság.
     - A legmagasabb szinten 5 Bánya teljesen megtölt egy Futószalagot.
@@ -1220,7 +1213,7 @@ tips:
     - Having the right building ratios will maximize efficiency.
     - A Vágók mindig függőleges irányban vágnak, mindegy, milyen irányban állnak.
     - A fehér szín előállításához keverd össze mindhárom színt.
-    - You don't need to divide up items evenly for full efficiency.
+    - Nem szükséges a tárgyakat egyenlő részekre bontani a maximális hatékonyságért.
     - Az <b>ALT</b> lenyomva tartásával megfordíthatod a lehelyezendú Futószalag
       irányát.
     - A hatékonyság kulcsfontosságú!
@@ -1228,8 +1221,8 @@ tips:
     - A gépeknek korlátozott sebességük van, csinálj belőlük többet a maximális
       hatékonyságért.
     - Használj Elosztókat a maximális hatékonyságért.
-    - Holding <b>SHIFT</b> lets you place multiple buildings at a time.
-    - You can hold <b>ALT</b> to invert the direction of placed belts.
+    - A <b>SHIFT</b> nyomvatartásával egyszerre több építményt helyezhetsz le.
+    - Nyomva tarthatod az <b>ALT</b> gombot hogy a lerakott sínek helyzetét megfordítsd.
     - Ne rombold le a régi gyáraidat! Szükséged lesz rájuk a Fejlesztésekhez.
     - Próbáld megdönteni a 20. Szintet, mielőtt segítséget kérnél!
     - Ne bonyolítsd túl a dolgokat; csináld egyszerűen és sokra viheted.
@@ -1242,8 +1235,7 @@ tips:
     - Színezd be az alakzatodat vágás előtt a maximális hatékonyság érdekében.
     - Ha modulárisan építkezel, akkor nem számít a hely.
     - Csinálj egy különálló Tervrajz-gyárat. A modulokhoz később hasznos lesz.
-    - You may need to reuse factories later in the game. Build your factories to
-      be reusable.
+    - Lehet hogy néhány gyárat újra kell használnod később a játék során. Építsd a gyáraidat újrahasználhatóként.
     - Ha közel építesz a Központhoz, útban lesz a következő projektjeidnek.
     - A Fejlesztések lapon a gombostű ikon megnyomásával kitűzheted a képernyőre
       az aktuális alakzatot.
@@ -1252,7 +1244,7 @@ tips:
     - Próbáld ki a Factorio-t is! Az a kedvenc játékom.
     - A Negyedelő az alakzat jobb felső negyedétől kezd vágni, az óramutató
       járásával megegyező irányban!
-    - Use <b>CTRL</b> + Click to select an area.
+    - Használd a <b>CTRL</b> + Bal klikk gombokat terület kiválasztásához.
     - A játék nagyon sok hasznos gyorsbillentyűt tartalmaz! Nézd meg őket a
       Beállítások menüben.
     - A játék nagyon sok beállítást tartalmaz, mindenképpen nézd meg őket!
@@ -1261,15 +1253,13 @@ tips:
       ugyanarra a helyre.
     - Az F4 megnyomásával láthatod az FPS-edet és a Tick/mp értéket.
     - Nyomd meg az F4-et kétszer, hogy arra a csempére ugorj, ahol az egered van.
-    - You can download your savegames in the main menu!
-    - This game has a lot of useful keybindings! Be sure to check out the
-      settings page.
-    - This game has a lot of settings, be sure to check them out!
+    - A mentéseidet letöltheted a főmenüben!
+    - Ennek a játéknak rengeteg hasznos gombkiosztása van! Mindenképp csekkold le a beállítások menüt.
     - Your hub marker has a small compass that shows which direction it is in!
     - To clear belts, cut the area and then paste it at the same location.
     - You can click a pinned shape on the left side to unpin it.
     - Press F4 twice to show the tile of your mouse and camera.
-    - You can click a pinned shape on the left side to unpin it.
+    - Rákattinthatsz egy kitűzött alakra bal oldalt hogy levedd a kitűzést róla.
 puzzleMenu:
     play: Játék
     edit: Szerkesztés
@@ -1309,26 +1299,25 @@ puzzleMenu:
         autoComplete: A fejtörő automatikusan megoldja magát! Győződj meg róla, hogy a
             Termelők nem közvetlenül az Elfogadóba termelnek.
     difficulties:
-        easy: Easy
-        medium: Medium
-        hard: Hard
-        unknown: Unrated
-    dlcHint: Purchased the DLC already? Make sure it is activated by right clicking
-        shapez.io in your library, selecting Properties > DLCs.
+        easy: Könnyű
+        medium: Közepes
+        hard: Nehéz
+        unknown: Ismeretlen
+    dlcHint: Már megvetted a DLC-t? Bizonyosodj meg róla hogy aktiválva van, jobb klikk a shapez.io-ra a könyvtáradban, majd Tulajdonságok > DLC-k.
     search:
-        action: Search
-        placeholder: Enter a puzzle or author name
-        includeCompleted: Include Completed
+        action: Keresés
+        placeholder: Írd be egy fejtörő vagy készítő nevét
+        includeCompleted: Teljesítettek mutatása
         difficulties:
-            any: Any Difficulty
-            easy: Easy
-            medium: Medium
-            hard: Hard
+            any: Bármilyen nehézség
+            easy: Könnyű
+            medium: Közepes
+            hard: Nehéz
         durations:
-            any: Any Duration
-            short: Short (< 2 min)
-            medium: Normal
-            long: Long (> 10 min)
+            any: Bármilyen hosszúságú
+            short: Rövid (< 2 perc)
+            medium: Normál
+            long: Hosszú (> 10 perc)
 backendErrors:
     ratelimit: Túl gyorsan csinálsz dolgokat. Kérlek, várj egy kicsit.
     invalid-api-key: Valami nem oké a játékkal. Próbáld meg frissíteni vagy
@@ -1352,25 +1341,19 @@ backendErrors:
     bad-payload: A kérés helytelen adatot tartalmaz.
     bad-building-placement: A fejtörőd helytelenül lehelyezett épületeket tartalmaz.
     timeout: A kérés időtúllépésbe került.
-    too-many-likes-already: The puzzle alreay got too many likes. If you still want
-        to remove it, please contact support@shapez.io!
-    no-permission: You do not have the permission to perform this action.
+    too-many-likes-already: A fejtörő már túl sok kedvelést kapott. Ha ezek után is töröltetni szeretnéd, vedd fel a kapcsolatot: support@shapez.io!
+    no-permission: Nincs hozzáférésed ehhez a funkcióhoz.
 mods:
-    title: Mods
-    author: Author
-    version: Version
-    modWebsite: Website
-    openFolder: Open Mods Folder
-    folderOnlyStandalone: Opening the mod folder is only possible when running the standalone.
-    browseMods: Browse Mods
-    modsInfo: To install and manage mods, copy them to the mods folder within the
-        game directory. You can also use the 'Open Mods Folder' button on the
-        top right.
-    noModSupport: You need the standalone version on Steam to install mods.
+    title: Modok
+    author: Készítő
+    version: Verzió
+    modWebsite: Weboldal
+    openFolder: Mod mappa megnyitása
+    folderOnlyStandalone: A mod mappa megnyitása csak az önálló verzióban lehetséges.
+    browseMods: Modok böngészése
+    modsInfo: Hogy telepíts és menedzselj modokat, másold át őket a mods mappába a játék mappáján belül. Használhatod a 'Mod mappa megnyitása' gombot is jobb felül.
+    noModSupport: Az önálló verzió szükséges Steamen a modok telepítéséhez.
     togglingComingSoon:
-        title: Coming Soon
-        description: Enabling or disabling mods is currently only possible by copying
-            the mod file from or to the mods/ folder. However, being able to
-            toggle them here is planned for a future update!
-    browserNoSupport: Due to browser restrictions it is currently only possible to
-        install mods in the Steam version - Sorry!
+        title: Nemsoká érkezik
+        description: A modok ki és bekapcsolása jelenleg csak a mod fájlok bemásolásával és kitörlésével a mods mappában lehetséges. Viszont az itt történő állítására szolgáló menü tervben van!
+    browserNoSupport: A böngészők inkompatibilitása miatt csak a Steames verzióban lehet modokat telepíteni - Sajnáljuk!
